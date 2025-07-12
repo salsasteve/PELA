@@ -1,0 +1,19 @@
+{
+  "compression_settings": {
+    "target_ratio": 1.8,
+    "max_layers": 20
+  },
+  "predictions": {
+    "total_original_params": 177245696,
+    "total_compressed_params": 98451456,
+    "overall_ratio": 1.8003359544017308,
+    "parameter_reduction_percent": 44.45481147254487,
+    "quality_distribution": {
+      "excellent": 0,
+      "good": 7,
+      "acceptable": 0,
+      "poor": 0,
+      "failed": 0
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.venv/
+*/olmocr/
+models/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+*.pyzw
+*.pyzwz

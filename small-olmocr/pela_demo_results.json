@@ -1,0 +1,279 @@
+{
+  "compression": {
+    "2.0": {
+      "target_ratio": 2.0,
+      "actual_ratio": 2.702557046210297,
+      "original_params": 25160704,
+      "compressed_params": 9956352,
+      "param_reduction": 15204352,
+      "modules_replaced": 11,
+      "per_module_stats": {
+        "att_proj": {
+          "original": 1049600,
+          "pela": 525312,
+          "reduction": 524288,
+          "compression_ratio": 1.9980506822612085
+        },
+        "ff_proj": {
+          "original": 4198400,
+          "pela": 1314816,
+          "reduction": 2883584,
+          "compression_ratio": 3.1931464174454827
+        },
+        "attn_out": {
+          "original": 1049600,
+          "pela": 525312,
+          "reduction": 524288,
+          "compression_ratio": 1.9980506822612085
+        },
+        "ff_out": {
+          "original": 4195328,
+          "pela": 1311744,
+          "reduction": 2883584,
+          "compression_ratio": 3.198282591725215
+        },
+        "vision_backbone.image_projector": {
+          "original": 1049600,
+          "pela": 525312,
+          "reduction": 524288,
+          "compression_ratio": 1.9980506822612085
+        },
+        "attention.wq": {
+          "original": 1049600,
+          "pela": 525312,
+          "reduction": 524288,
+          "compression_ratio": 1.9980506822612085
+        },
+        "attention.wk": {
+          "original": 1049600,
+          "pela": 525312,
+          "reduction": 524288,
+          "compression_ratio": 1.9980506822612085
+        },
+        "attention.wv": {
+          "original": 1049600,
+          "pela": 525312,
+          "reduction": 524288,
+          "compression_ratio": 1.9980506822612085
+        },
+        "attention.wo": {
+          "original": 1049600,
+          "pela": 525312,
+          "reduction": 524288,
+          "compression_ratio": 1.9980506822612085
+        },
+        "feed_forward.w1": {
+          "original": 4198400,
+          "pela": 1314816,
+          "reduction": 2883584,
+          "compression_ratio": 3.1931464174454827
+        },
+        "feed_forward.w2": {
+          "original": 4195328,
+          "pela": 1311744,
+          "reduction": 2883584,
+          "compression_ratio": 3.198282591725215
+        }
+      }
+    },
+    "3.0": {
+      "target_ratio": 3.0,
+      "actual_ratio": 3.1354263669016893,
+      "original_params": 25160704,
+      "compressed_params": 8723456,
+      "param_reduction": 16437248,
+      "modules_replaced": 11,
+      "per_module_stats": {
+        "att_proj": {
+          "original": 1049600,
+          "pela": 349184,
+          "reduction": 700416,
+          "compression_ratio": 3.005865102639296
+        },
+        "ff_proj": {
+          "original": 4198400,
+          "pela": 1314816,
+          "reduction": 2883584,
+          "compression_ratio": 3.1931464174454827
+        },
+        "attn_out": {
+          "original": 1049600,
+          "pela": 349184,
+          "reduction": 700416,
+          "compression_ratio": 3.005865102639296
+        },
+        "ff_out": {
+          "original": 4195328,
+          "pela": 1311744,
+          "reduction": 2883584,
+          "compression_ratio": 3.198282591725215
+        },
+        "vision_backbone.image_projector": {
+          "original": 1049600,
+          "pela": 349184,
+          "reduction": 700416,
+          "compression_ratio": 3.005865102639296
+        },
+        "attention.wq": {
+          "original": 1049600,
+          "pela": 349184,
+          "reduction": 700416,
+          "compression_ratio": 3.005865102639296
+        },
+        "attention.wk": {
+          "original": 1049600,
+          "pela": 349184,
+          "reduction": 700416,
+          "compression_ratio": 3.005865102639296
+        },
+        "attention.wv": {
+          "original": 1049600,
+          "pela": 349184,
+          "reduction": 700416,
+          "compression_ratio": 3.005865102639296
+        },
+        "attention.wo": {
+          "original": 1049600,
+          "pela": 349184,
+          "reduction": 700416,
+          "compression_ratio": 3.005865102639296
+        },
+        "feed_forward.w1": {
+          "original": 4198400,
+          "pela": 1314816,
+          "reduction": 2883584,
+          "compression_ratio": 3.1931464174454827
+        },
+        "feed_forward.w2": {
+          "original": 4195328,
+          "pela": 1311744,
+          "reduction": 2883584,
+          "compression_ratio": 3.198282591725215
+        }
+      }
+    },
+    "5.0": {
+      "target_ratio": 5.0,
+      "actual_ratio": 5.009351753453773,
+      "original_params": 25160704,
+      "compressed_params": 5843968,
+      "param_reduction": 19316736,
+      "modules_replaced": 11,
+      "per_module_stats": {
+        "att_proj": {
+          "original": 1049600,
+          "pela": 209920,
+          "reduction": 839680,
+          "compression_ratio": 5.0
+        },
+        "ff_proj": {
+          "original": 4198400,
+          "pela": 838656,
+          "reduction": 3359744,
+          "compression_ratio": 5.006105006105006
+        },
+        "attn_out": {
+          "original": 1049600,
+          "pela": 209920,
+          "reduction": 839680,
+          "compression_ratio": 5.0
+        },
+        "ff_out": {
+          "original": 4195328,
+          "pela": 835584,
+          "reduction": 3359744,
+          "compression_ratio": 5.020833333333333
+        },
+        "vision_backbone.image_projector": {
+          "original": 1049600,
+          "pela": 209920,
+          "reduction": 839680,
+          "compression_ratio": 5.0
+        },
+        "attention.wq": {
+          "original": 1049600,
+          "pela": 209920,
+          "reduction": 839680,
+          "compression_ratio": 5.0
+        },
+        "attention.wk": {
+          "original": 1049600,
+          "pela": 209920,
+          "reduction": 839680,
+          "compression_ratio": 5.0
+        },
+        "attention.wv": {
+          "original": 1049600,
+          "pela": 209920,
+          "reduction": 839680,
+          "compression_ratio": 5.0
+        },
+        "attention.wo": {
+          "original": 1049600,
+          "pela": 209920,
+          "reduction": 839680,
+          "compression_ratio": 5.0
+        },
+        "feed_forward.w1": {
+          "original": 4198400,
+          "pela": 838656,
+          "reduction": 3359744,
+          "compression_ratio": 5.006105006105006
+        },
+        "feed_forward.w2": {
+          "original": 4195328,
+          "pela": 835584,
+          "reduction": 3359744,
+          "compression_ratio": 5.020833333333333
+        }
+      }
+    }
+  },
+  "svd_demo": {
+    "ranks": [
+      1,
+      5,
+      10,
+      20,
+      50
+    ],
+    "errors": [
+      4661.839324244111,
+      1578.1948360811884,
+      909.204138330743,
+      466.9881989939137,
+      172.34433638958
+    ],
+    "image_shape": [
+      510,
+      1020
+    ]
+  },
+  "benchmark": {
+    "Original": {
+      "model_size_mb": 95.98046875,
+      "avg_inference_time": 0.0,
+      "std_inference_time": 0.0,
+      "throughput": 0
+    },
+    "PELA-Compressed": {
+      "model_size_mb": 33.27734375,
+      "avg_inference_time": 0.0,
+      "std_inference_time": 0.0,
+      "throughput": 0
+    },
+    "improvements": {
+      "size_reduction_percent": 65.32904643685646,
+      "speed_improvement_percent": 0
+    }
+  },
+  "training_setup": {
+    "teacher_params": 25160704,
+    "student_total_params": 8723456,
+    "student_trainable_params": 7697408,
+    "student_frozen_params": 1026048,
+    "trainable_ratio": 88.23805610987205,
+    "frozen_ratio": 11.761943890127949,
+    "compression_ratio": 2.884258715811715
+  }
+}

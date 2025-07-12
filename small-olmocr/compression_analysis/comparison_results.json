@@ -1,0 +1,240 @@
+{
+  "overall_stats": {
+    "weight_stats": {
+      "mean_frobenius_error": 0.9528418402536234,
+      "std_frobenius_error": 0.029143398362610536,
+      "mean_cosine_similarity": 0.29592775404453275,
+      "std_cosine_similarity": 0.08809192412881839,
+      "mean_correlation": 0.29496964514255525,
+      "std_correlation": 0.08748916492371552
+    }
+  },
+  "layer_reports": [
+    {
+      "layer_name": "model.language_model.layers.0.mlp.gate_proj",
+      "layer_shape": [
+        3584,
+        18944
+      ],
+      "weight_metrics": {
+        "frobenius_error": 101.69231414794922,
+        "relative_frobenius_error": 0.9027785961859425,
+        "mse": 0.00015382842684630305,
+        "mae": 0.008791832253336906,
+        "max_absolute_error": 0.3248327076435089,
+        "std_error": 0.012402758933603764,
+        "correlation": 0.4370236098766327,
+        "cosine_similarity": 0.4387453496456146,
+        "spectral_error": NaN,
+        "relative_spectral_error": NaN
+      },
+      "forward_metrics": {
+        "error": "expected mat1 and mat2 to have the same dtype, but got: float != struct c10::Half"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.0.mlp.up_proj",
+      "layer_shape": [
+        3584,
+        18944
+      ],
+      "weight_metrics": {
+        "frobenius_error": 92.75797271728516,
+        "relative_frobenius_error": 0.9744521139237878,
+        "mse": 0.00012845790479332209,
+        "mae": 0.008429738692939281,
+        "max_absolute_error": 0.20451658964157104,
+        "std_error": 0.011333927512168884,
+        "correlation": 0.22912470996379852,
+        "cosine_similarity": 0.22921474277973175,
+        "spectral_error": NaN,
+        "relative_spectral_error": NaN
+      },
+      "forward_metrics": {
+        "error": "expected mat1 and mat2 to have the same dtype, but got: float != struct c10::Half"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.0.mlp.down_proj",
+      "layer_shape": [
+        18944,
+        3584
+      ],
+      "weight_metrics": {
+        "frobenius_error": 97.76132202148438,
+        "relative_frobenius_error": 0.9805409584770934,
+        "mse": 0.00014284520875662565,
+        "mae": 0.008841358125209808,
+        "max_absolute_error": 0.3504028618335724,
+        "std_error": 0.011951787397265434,
+        "correlation": 0.20028969645500183,
+        "cosine_similarity": 0.20035919547080994,
+        "spectral_error": NaN,
+        "relative_spectral_error": NaN
+      },
+      "forward_metrics": {
+        "error": "expected mat1 and mat2 to have the same dtype, but got: float != struct c10::Half"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.1.mlp.gate_proj",
+      "layer_shape": [
+        3584,
+        18944
+      ],
+      "weight_metrics": {
+        "frobenius_error": 104.70460510253906,
+        "relative_frobenius_error": 0.9373154536508086,
+        "mse": 0.00016270104970317334,
+        "mae": 0.008006448857486248,
+        "max_absolute_error": 0.2429812252521515,
+        "std_error": 0.012755433097481728,
+        "correlation": 0.3522779941558838,
+        "cosine_similarity": 0.353777676820755,
+        "spectral_error": NaN,
+        "relative_spectral_error": NaN
+      },
+      "forward_metrics": {
+        "error": "expected mat1 and mat2 to have the same dtype, but got: float != struct c10::Half"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.1.mlp.up_proj",
+      "layer_shape": [
+        3584,
+        18944
+      ],
+      "weight_metrics": {
+        "frobenius_error": 84.8301010131836,
+        "relative_frobenius_error": 0.9691220790304849,
+        "mse": 0.00010683025175239891,
+        "mae": 0.006480248179286718,
+        "max_absolute_error": 0.2719891667366028,
+        "std_error": 0.010335872881114483,
+        "correlation": 0.25613221526145935,
+        "cosine_similarity": 0.25754180550575256,
+        "spectral_error": NaN,
+        "relative_spectral_error": NaN
+      },
+      "forward_metrics": {
+        "error": "expected mat1 and mat2 to have the same dtype, but got: float != struct c10::Half"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.11.self_attn.q_proj",
+      "layer_shape": [
+        3584,
+        3584
+      ],
+      "weight_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "forward_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.11.self_attn.o_proj",
+      "layer_shape": [
+        3584,
+        3584
+      ],
+      "weight_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "forward_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.12.self_attn.q_proj",
+      "layer_shape": [
+        3584,
+        3584
+      ],
+      "weight_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "forward_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.12.self_attn.o_proj",
+      "layer_shape": [
+        3584,
+        3584
+      ],
+      "weight_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "forward_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.13.self_attn.q_proj",
+      "layer_shape": [
+        3584,
+        3584
+      ],
+      "weight_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "forward_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    },
+    {
+      "layer_name": "model.language_model.layers.13.self_attn.o_proj",
+      "layer_shape": [
+        3584,
+        3584
+      ],
+      "weight_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "forward_metrics": {
+        "error": "Cannot copy out of meta tensor; no data!"
+      },
+      "singular_value_metrics": {
+        "error": "\"linalg_svd_cpu\" not implemented for 'Half'"
+      }
+    }
+  ],
+  "model_info": {
+    "original_layers": 327,
+    "compressed_layers": 327,
+    "sampled_layers": 11
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "model_name": "allenai/Molmo-7B-O-0924",
+  "total_parameters": 0,
+  "linear_layers": {},
+  "target_layers": {},
+  "non_target_layers": {},
+  "pela_compatibility": {
+    "compatible": true,
+    "confidence": "high",
+    "reasoning": "Architecture matches expected patterns for vision-language transformer"
+  },
+  "memory_analysis": {
+    "model_weights_fp16_gb": 0.0,
+    "activations_gb": 2.0,
+    "gradients_gb": 0.0,
+    "optimizer_states_gb": 0.0,
+    "total_training_gb": 2.0,
+    "inference_only_gb": 2.0,
+    "pela_memory": {
+      "compressed_model_fp16_gb": 0.0,
+      "teacher_model_gb": 0.0,
+      "pela_training_gb": 4.0
+    },
+    "feasibility": {
+      "original_inference": true,
+      "original_training": true,
+      "pela_inference": true,
+      "pela_training": true,
+      "cpu_offloading_needed": false
+    },
+    "recommendations": [
+      "PELA compressed model should fit for inference"
+    ]
+  },
+  "architecture_summary": {},
+  "config": {
+    "vocab_size": 100278,
+    "embedding_size": 100352,
+    "max_position_embeddings": 4096,
+    "hidden_size": 4096,
+    "intermediate_size": 22016,
+    "num_hidden_layers": 32,
+    "num_attention_heads": 32,
+    "layer_norm_eps": 1e-06,
+    "weight_tying": false,
+    "use_position_ids": true,
+    "attention_layer_norm": true,
+    "num_key_value_heads": null,
+    "initializer_range": 0.02,
+    "use_cache": true,
+    "rope_theta": 500000.0,
+    "clip_qkv": null,
+    "qkv_bias": false,
+    "norm_after": true,
+    "tie_word_embeddings": false,
+    "layer_norm_type": "rms",
+    "return_dict": true,
+    "output_hidden_states": false,
+    "torchscript": false,
+    "torch_dtype": "float32",
+    "use_bfloat16": false,
+    "tf_legacy_loss": false,
+    "pruned_heads": {},
+    "chunk_size_feed_forward": 0,
+    "is_encoder_decoder": false,
+    "is_decoder": false,
+    "cross_attention_hidden_size": null,
+    "add_cross_attention": false,
+    "tie_encoder_decoder": false,
+    "max_length": 20,
+    "min_length": 0,
+    "do_sample": false,
+    "early_stopping": false,
+    "num_beams": 1,
+    "num_beam_groups": 1,
+    "diversity_penalty": 0.0,
+    "temperature": 1.0,
+    "top_k": 50,
+    "top_p": 1.0,
+    "typical_p": 1.0,
+    "repetition_penalty": 1.0,
+    "length_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "encoder_no_repeat_ngram_size": 0,
+    "bad_words_ids": null,
+    "num_return_sequences": 1,
+    "output_scores": false,
+    "return_dict_in_generate": false,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "remove_invalid_values": false,
+    "exponential_decay_length_penalty": null,
+    "suppress_tokens": null,
+    "begin_suppress_tokens": null,
+    "architectures": [
+      "MolmoForCausalLM"
+    ],
+    "finetuning_task": null,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "tokenizer_class": null,
+    "prefix": null,
+    "bos_token_id": null,
+    "pad_token_id": null,
+    "eos_token_id": null,
+    "sep_token_id": null,
+    "decoder_start_token_id": null,
+    "task_specific_params": null,
+    "problem_type": null,
+    "_name_or_path": "allenai/Molmo-7B-O-0924",
+    "transformers_version": "4.53.1",
+    "auto_map": {
+      "AutoConfig": "config_molmo.MolmoConfig",
+      "AutoModelForCausalLM": "modeling_molmo.MolmoForCausalLM"
+    },
+    "model_type": "molmo",
+    "output_attentions": false
+  },
+  "analysis_type": "estimated",
+  "estimated_total_parameters": 7000000000,
+  "estimated_target_parameters": 4108320768,
+  "estimated_target_percentage": 58.69029668571428,
+  "estimated_target_layers": 267,
+  "architecture_patterns": {
+    "model_type": "molmo",
+    "hidden_size": 4096,
+    "num_layers": 32,
+    "num_attention_heads": 32,
+    "intermediate_size": 11008,
+    "vision_config": {
+      "hidden_size": 1024,
+      "num_layers": 23,
+      "patch_size": 14
+    }
+  }
+}

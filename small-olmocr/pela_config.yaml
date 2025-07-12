@@ -1,0 +1,123 @@
+# PELA Configuration for OLMoOCR
+# Parameter-Efficient Learning with Low-Rank Approximation
+
+# Main PELA settings
+pela:
+  enabled: true
+  compress_ratio: 3.0  # Target compression ratio (3x compression)
+  min_rank: 8          # Minimum rank for any layer
+  max_rank: 256        # Maximum rank for any layer
+  
+  # Feature distillation parameters
+  distillation_alpha: 0.5          # Weight for combining distillation and task loss
+  distillation_temperature: 4.0    # Temperature for softmax distillation
+  distillation_weight: 1.0         # Scaling factor for distillation loss
+  
+  # Weight perturbation regularization
+  weight_perturbation_weight: 0.1  # Scaling factor for weight perturbation loss
+  perturbation_std: 0.01           # Standard deviation for weight perturbations
+  
+  # Training parameters
+  freeze_original_weights: true    # Freeze non-PELA parameters during training
+  
+  # Target modules for compression (based on OLMoOCR architecture)
+  target_modules:
+    # Main transformer layers
+    - "att_proj"      # Attention projection layers
+    - "ff_proj"       # Feed-forward projection layers  
+    - "attn_out"      # Attention output layers
+    - "ff_out"        # Feed-forward output layers
+    
+    # Vision transformer layers
+    - "attention.wq"  # Query projection
+    - "attention.wk"  # Key projection
+    - "attention.wv"  # Value projection
+    - "attention.wo"  # Output projection
+    - "feed_forward.w1"  # FF layer 1
+    - "feed_forward.w2"  # FF layer 2
+    
+    # Vision backbone projector
+    - "vision_backbone.image_projector"
+  
+  # Modules to exclude from compression
+  exclude_modules:
+    - "embed"         # Embedding layers
+    - "embedding"     # Alternative embedding naming
+    - "norm"          # Normalization layers
+    - "ln"            # Layer norm
+    - "head"          # Classification heads
+    - "classifier"    # Alternative classifier naming
+
+# Training hyperparameters optimized for PELA
+training:
+  learning_rate: 5e-5      # Lower LR for stable training with compressed model
+  warmup_steps: 500        # Warmup steps
+  max_steps: 5000          # Total training steps
+  batch_size: 8            # Batch size per device
+  gradient_accumulation_steps: 4  # Effective batch size = 8 * 4 = 32
+  
+  # Evaluation and logging
+  eval_steps: 500          # Evaluate every N steps
+  logging_steps: 50        # Log every N steps
+  save_steps: 1000         # Save checkpoint every N steps
+  
+  # Optimization settings
+  weight_decay: 0.01       # L2 regularization
+  max_grad_norm: 1.0       # Gradient clipping
+  
+  # Mixed precision and efficiency
+  bf16: true               # Use bfloat16
+  gradient_checkpointing: true  # Save memory at cost of compute
+  
+  # Advanced settings
+  optim: "adamw_torch"     # Optimizer
+  lr_scheduler_type: "cosine"  # Learning rate schedule
+  metric_for_best_model: "eval_loss"  # Metric for model selection
+
+# Model configuration
+model:
+  use_flash_attn: true     # Use flash attention for efficiency
+  max_length: 2048         # Maximum sequence length
+
+# Data processing
+data:
+  max_workers: 4           # Number of data loading workers
+  preprocessing_num_workers: 8  # Preprocessing workers
+
+# Alternative PELA configurations for different scenarios
+
+# High compression variant (5x compression, minimal accuracy loss)
+pela_high_compression:
+  enabled: true
+  compress_ratio: 5.0
+  min_rank: 4
+  max_rank: 128
+  distillation_weight: 2.0  # Higher distillation weight for stability
+  weight_perturbation_weight: 0.05
+
+# Conservative variant (2x compression, maximum accuracy preservation)
+pela_conservative:
+  enabled: true
+  compress_ratio: 2.0
+  min_rank: 16
+  max_rank: 512
+  distillation_weight: 0.5
+  weight_perturbation_weight: 0.2
+
+# Fine-tuning variant (for task-specific adaptation)
+pela_finetune:
+  enabled: true
+  compress_ratio: 3.0
+  freeze_original_weights: false  # Allow fine-tuning of all parameters
+  distillation_weight: 0.1        # Lower distillation weight
+  weight_perturbation_weight: 0.0 # No perturbation for fine-tuning
+
+# Quick experimentation variant (minimal settings)
+pela_quick:
+  enabled: true
+  compress_ratio: 3.0
+  target_modules:
+    - "att_proj"
+    - "ff_proj"
+  distillation_weight: 0.5
+  weight_perturbation_weight: 0.0 

@@ -1,0 +1,31 @@
+[project]
+name = "small-olmocr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "boto3>=1.39.4",
+    "datasets>=4.0.0",
+    "einops>=0.8.1",
+    "ftfy>=6.3.1",
+    "huggingface-hub[hf-xet]>=0.33.2",
+    "lingua>=4.15.0",
+    "matplotlib>=3.10.3",
+    "necessary>=0.4.3",
+    "numpy>=2.3.1",
+    "omegaconf>=2.3.0",
+    "peft>=0.16.0",
+    "pillow>=11.3.0",
+    "psutil>=7.0.0",
+    "pypdf>=5.7.0",
+    "pypdfium2>=4.30.1",
+    "pyyaml>=6.0.2",
+    "rich>=14.0.0",
+    "seaborn>=0.13.2",
+    "smart-open>=7.3.0.post1",
+    "torch>=2.7.1",
+    "tqdm>=4.67.1",
+    "transformers>=4.53.1",
+    "wandb>=0.21.0",
+]
